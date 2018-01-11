@@ -82,6 +82,12 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
                 
             }
             self.chatTableView.reloadData()
+            self.scrollTableToBottom()
+        }
+    }
+    
+    func scrollTableToBottom(){
+        if(self.chatList.count > 0){
             let indexpath = IndexPath(row: self.chatList.count-1, section: 0)
             self.chatTableView.scrollToRow(at: indexpath, at: .bottom, animated: true)
         }
@@ -112,10 +118,9 @@ extension ViewController {
                                   height: (originalWindowFrame?.size.height)!)
             let diff = bottomOfTextView - keyboardY + 5;
             if(diff > 0){
-                newFrame.origin.y -= diff;
+                newFrame.size.height -= diff;
                 self.view.frame = newFrame
             }
-            
         }
         
     }
@@ -134,6 +139,7 @@ extension ViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! ChatTableViewCell
         cell.setChat(chat: self.chatList[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     
