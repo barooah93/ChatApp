@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.loginAnonymous():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "FIRAuth.auth()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.loginAnonymous():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user?.uid">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.keyboardWillShow(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(info?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue">
+            </PersistentString>
+            <PersistentString
+               value = "self.view.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
